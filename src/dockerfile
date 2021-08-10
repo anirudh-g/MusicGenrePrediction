@@ -1,0 +1,7 @@
+FROM ubuntu:18.04
+
+RUN apt update && apt install -y python3-dev
+
+COPY . src/
+RUN cd src && pip install -r requirements.txt 
+#check this line
