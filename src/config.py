@@ -12,6 +12,4 @@ MODEL_OUTPUT = r"C:/Users/ganir/iCloudDrive/ML Competitions/MachineHack/MusicGen
 
 submission = r"C:\Users\ganir\iCloudDrive\ML Competitions\MachineHack\MusicGenrePrediction\data\submission_sample.csv"
 
-#MODEL_OUTPUT = 
-
-# SUBMISSION_FILE
+TRAINED_MODEL = r"C:\Users\ganir\iCloudDrive\ML Competitions\MachineHack\MusicGenrePrediction\model\trained_model.bin"
