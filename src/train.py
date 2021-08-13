@@ -16,6 +16,7 @@ import model_dispatcher
 
 def run():
     ''' The function consists of the model pipeline that will be used to run the input model'''
+    
     numeric_transformer = pipeline.Pipeline(steps=[
         ('outliers', preprocessing.RobustScaler(quantile_range=(5,95))),
         ('imputer', impute.IterativeImputer(random_state=42, max_iter=100)), 
