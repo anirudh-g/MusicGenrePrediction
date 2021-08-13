@@ -34,4 +34,8 @@ There are 2 key parts to the solution:
                                         (For testing purpose - The data was scaled and labelencoded)
        
       - Machine Leanring Model building : A bagging based classifer Random Forest and a boosting based classifier XGBoost were Stacked by using the Stacking Classifier. 
-                                          Logistic regression withL1 penalty (which acts as an feature selector) was used as the final estimator  
+                                          Logistic regression with L1 penalty (which acts as an feature selector) was used as the final estimator  
+
+
+
+Along with competing in the hackathon, I used this as an opportunity to learn tools like Docker, DVC and experiment with the project structure.
