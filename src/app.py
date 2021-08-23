@@ -1,6 +1,8 @@
 import streamlit as st
 import joblib
 import config
+import pandas as pd
+import numpy as np
 
 model = joblib.load(config.TRAINED_MODEL)
 
@@ -8,10 +10,15 @@ model = joblib.load(config.TRAINED_MODEL)
 
 def prediction(Popularity, danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness,
 liveness, valence, tempo, duration, time_signature, new4, new5, new6, new7, new8, new9, new10):
-
-    prediction = model.predict([[Popularity, danceability, energy, key, loudness, mode, speechiness, acousticness,
+    
+    my_array = [[Popularity, danceability, energy, key, loudness, mode, speechiness, acousticness,
      instrumentalness,liveness, valence, tempo, duration, time_signature, new4, new5, new6, new7, 
-     new8, new9, new10]])
+     new8, new9, new10]]
+
+    col_names = pd.read_csv(config.X_train)
+
+    df = pd.DataFrame(my_array, columns = list(col_names.columns))
+    prediction = model.predict(df)
 
     if prediction == 0:
         pred='Acoustic/Folk_0'
