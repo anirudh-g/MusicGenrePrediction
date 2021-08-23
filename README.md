@@ -39,3 +39,5 @@ There are 2 key parts to the solution:
 
 
 Along with competing in the hackathon, I used this as an opportunity to learn tools like Docker, DVC and experiment with the project structure.
+
+A webapp and API was built using streamlit and FastAPI respectively 
